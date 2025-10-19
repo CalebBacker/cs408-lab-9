@@ -92,7 +92,7 @@ class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
     this.color = "white";
-    this.size = 10;
+    this.size = 25;
 
     window.addEventListener("keydown", (e) => {
       switch (e.key) {
@@ -173,8 +173,8 @@ while (balls.length < 25) {
     // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-7, 7),
-    random(-7, 7),
+    random(-7, 3),
+    random(-7, 3),
     randomRGB(),
     size
   );
@@ -182,6 +182,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 const player = new EvilCircle(0, 0);
+
+
 function loop() {
 
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
